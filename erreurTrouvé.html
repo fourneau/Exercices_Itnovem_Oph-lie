@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP 1 erreur</title>
+</head>
+<body>
+  Trouvez les erreurs et les résoudre
+<script>
+    
+function erreur() {
+  console.log("Il y a une erreur de compilation");
+  var demo = "salut"
+  console.log(demo)
+  var a = null
+  if (null === a) {
+    console.log(a,"a est null");
+  }
+
+  // var b = 30; Convertir le int en string (tu changes pas la condition)
+var b = 30 // Simple quotes pour garder une cohérence
+b=''+b
+  if (b === '30') {
+     console.log(b,"b est égal à 30");
+  }
+
+  // var c = ['je suis une variable']; // Changer la condition (3 solutions possibles et les mettre dans la condition en les séparant && )
+  var c = "je suis une variable"
+  if (c === 'je suis une variable' && c !== null) {
+    console.log(c,"je suis bien rentrée dans la variable c");
+  }
+
+  // var d = 2; // Convertir int en string dans la condition, trouver aussi une autre solution que la variable b
+  var d = 2 // simple quotes
+  d=d.toString()
+  if (typeof d === 'string') {
+    console.log(d,'d est égale à 2');
+  }
+
+  // Trouver les 2 solutions, le fait de rentrer dans le if et aussi dans le else avec les bonnes valeurs
+  // var e = {message: 'Bonjour !'}
+  // Ici faut que ça rentre dans le if
+  var e = ["Bonjour !","salut"]
+  if (e instanceof Array) {
+    console.log(e[1]); // en utilisant la variable, on doit afficher 'Bonjour !'
+    console.log(e,"Je suis dans un tableau");
+  } else {
+    console.log('oups, je suis dans le else', e[0],"Bonjour!"); // doit afficher 'Bonjour !'
+  }
+
+  // Ici faut que ça rentre dans le else
+  var e = {message: 'Bonjour !'};
+  if (e instanceof Array) {
+    console.log(e,[0]); // en utilisant la variable, on doit afficher 'Bonjour !'
+    console.log(Array,"Je suis dans un tableau");
+  } else {
+    console.log('oups, je suis dans le else', e.message); // doit afficher 'Bonjour !'
+  }
+
+var f = {type:'Je suis de type objet'}
+  if (f instanceof Object) {
+    console.log(f, "Testons la variable f");
+    console.log('Je suis de type objet',f.type); // doit afficher 'Je suis de type objet'
+  }
+
+  var h = [1,2,3];
+  for(var i = 0; i<h.length;i++){
+    switch(h[i]){
+      case "1":
+      console.log("c'est un 1");
+      break;
+      case "2":
+      console.log("c'est un 2");
+      break;
+      case "3":
+      console.log("c'est un 3");
+      break;
+      default:
+      console.log("Tu t'es perdu");
+        break;
+    }
+  }
+
+  const array1 = [1,2,3];
+  array1.forEach(element => console.log(element));
+  array1.forEach(index => console.log(1));
+  array1.forEach(() => console.log(2));
+  
+
+  var h = [1,2,3];
+  if (h[0] == 1) {
+    console.log('h est égale à 1');
+  } else if (h[1] === '2'); {
+    console.log('h est à égale à 2');
+  }
+  // Après avoir trouvé la solution, utiliser un switch avec le tableau h. en parcourant toutes les données
+
+  // var i = 1;
+ var i = 1;
+  if (typeof i === 'number') { // change juste la condition pour checker que i est bien un entier
+    console.log(i,"i est un entier");
+  }
+
+  let j = 5;
+  j = '7';
+  j=parseInt(j) // Convertir string en entier
+  console.log('la valeur de j doit être un entier !!', j);
+  var k = 3
+  k = k - 3;
+  console.log("je devrai si mes calculs sont bons trouver 0", k);
+}
+erreur();
+
+function autreErreur(){
+  console.log("faut tester cette autre erreur");
+}
+
+autreErreur();
+
+function derniereErreur(erreur) {
+  console.log("Quelle est cette erreur ?", erreur);
+}
+
+
+var h = [1,2,3];
+  for(var i = 0; i<h.length;i++){
+    switch(h[i]){
+      case "1":
+      console.log("c'est un 1");
+      break;
+      case "2":
+      console.log("c'est un 2");
+      break;
+      case "3":
+      console.log("c'est un 3");
+      break;
+      default:
+        break;
+    }
+  }
+derniereErreur("string")
+
+</script>
+</body>
+</html> 
